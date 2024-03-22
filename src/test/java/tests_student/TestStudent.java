@@ -1,4 +1,4 @@
-package TestStudent;
+package tests_student;
 
 import org.example.domain.*;
 import org.example.repository.*;
