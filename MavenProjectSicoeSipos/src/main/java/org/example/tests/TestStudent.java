@@ -13,7 +13,7 @@ import static junit.framework.TestCase.assertEquals;
 
 public class TestStudent {
     Validator<Student> studentValidator = new StudentValidator();
-    StudentXMLRepository studentXmlRepo = new StudentXMLRepository(studentValidator, "studenti.xml");
+    StudentXMLRepository studentXmlRepo = new StudentXMLRepository(studentValidator, "src/main/java/org/example/studenti.xml");
 
 
     @Test
