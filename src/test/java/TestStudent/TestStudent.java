@@ -1,3 +1,5 @@
+package TestStudent;
+
 import org.example.domain.*;
 import org.example.repository.*;
 import org.example.service.*;
