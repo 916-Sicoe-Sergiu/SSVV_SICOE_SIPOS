@@ -12,6 +12,10 @@
         <Nume>12</Nume>
         <Grupa>122</Grupa>
     </student>
+    <student ID="S123">
+        <Nume>John Doe</Nume>
+        <Grupa>500</Grupa>
+    </student>
     <student ID="s1">
         <Nume>Student One</Nume>
         <Grupa>200</Grupa>
