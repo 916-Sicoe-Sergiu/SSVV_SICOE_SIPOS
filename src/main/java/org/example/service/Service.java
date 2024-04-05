@@ -20,6 +20,9 @@ public class Service {
     public Service(StudentXMLRepository studentXmlRepo) {
         this.studentXmlRepo = studentXmlRepo;
     }
+    public Service(TemaXMLRepository temaXMLRepository) {
+        this.temaXmlRepo = temaXMLRepository;
+    }
 
     public Iterable<Student> findAllStudents() { return studentXmlRepo.findAll(); }
 
