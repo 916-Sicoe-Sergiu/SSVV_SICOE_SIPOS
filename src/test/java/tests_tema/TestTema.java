@@ -21,5 +21,10 @@ public class TestTema {
     public void testSaveTemaFailure() {
         assertEquals(1, service.saveTema("S1234", "John Doe", 500, 500));
     }
+
+    @Test
+    public void testSaveTemaSucces_2() {
+        assertEquals(1, service.saveTema("", "", 0, 0));
+    }
 }
 
