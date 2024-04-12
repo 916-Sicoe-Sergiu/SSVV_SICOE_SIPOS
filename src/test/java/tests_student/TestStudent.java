@@ -4,7 +4,6 @@ import org.example.domain.*;
 import org.example.repository.*;
 import org.example.service.*;
 import org.example.validation.StudentValidator;
-import org.example.validation.ValidationException;
 import org.example.validation.Validator;
 import org.junit.Test;
 
@@ -13,7 +12,7 @@ import static junit.framework.TestCase.assertEquals;
 
 public class TestStudent {
     Validator<Student> studentValidator = new StudentValidator();
-    StudentXMLRepository studentXmlRepo = new StudentXMLRepository(studentValidator, "src/main/java/org/example/studenti.xml");
+    StudentXMLRepo studentXmlRepo = new StudentXMLRepo(studentValidator, "src/main/java/org/example/studenti.xml");
     Service service = new Service(studentXmlRepo);
 
     @Test

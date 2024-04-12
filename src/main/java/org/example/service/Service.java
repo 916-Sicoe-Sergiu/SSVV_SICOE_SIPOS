@@ -8,20 +8,24 @@ import java.time.temporal.WeekFields;
 import java.util.Locale;
 
 public class Service {
-    private StudentXMLRepository studentXmlRepo;
+    private StudentXMLRepo studentXmlRepo;
     private TemaXMLRepository temaXmlRepo;
     private NotaXMLRepository notaXmlRepo;
 
-    public Service(StudentXMLRepository studentXmlRepo, TemaXMLRepository temaXmlRepo, NotaXMLRepository notaXmlRepo) {
+    public Service(StudentXMLRepo studentXmlRepo, TemaXMLRepository temaXmlRepo, NotaXMLRepository notaXmlRepo) {
         this.studentXmlRepo = studentXmlRepo;
         this.temaXmlRepo = temaXmlRepo;
         this.notaXmlRepo = notaXmlRepo;
     }
-    public Service(StudentXMLRepository studentXmlRepo) {
+    public Service(StudentXMLRepo studentXmlRepo) {
         this.studentXmlRepo = studentXmlRepo;
     }
     public Service(TemaXMLRepository temaXMLRepository) {
         this.temaXmlRepo = temaXMLRepository;
+    }
+
+    public Service(NotaXMLRepository notaXMLRepo) {
+        this.notaXmlRepo = notaXMLRepo;
     }
 
     public Iterable<Student> findAllStudents() { return studentXmlRepo.findAll(); }
@@ -59,16 +63,16 @@ public class Service {
 
             if (predata - deadline > 2) {
                 valNota =  1;
-            } else {
+            } else if (predata > deadline) {
                 valNota =  valNota - 2.5 * (predata - deadline);
             }
             Nota nota = new Nota(new Pair(idStudent, idTema), valNota, predata, feedback);
             Nota result = notaXmlRepo.save(nota);
 
             if (result == null) {
-                return 1;
+                return 0;
             }
-            return 0;
+            return 1;
         }
     }
 

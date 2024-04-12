@@ -4,9 +4,9 @@ import org.example.validation.Validator;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-public class StudentXMLRepository extends AbstractXMLRepository<String, Student> {
+public class StudentXMLRepo extends AbstractXMLRepository<String, Student> {
 
-    public StudentXMLRepository(Validator<Student> validator, String XMLfilename) {
+    public StudentXMLRepo(Validator<Student> validator, String XMLfilename) {
         super(validator, XMLfilename);
         loadFromXmlFile();
     }
