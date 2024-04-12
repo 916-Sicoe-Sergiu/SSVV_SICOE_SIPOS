@@ -7,10 +7,27 @@ public class BigBangIntegration {
     TestGrade testGrade = new TestGrade();
     TestStudent testStudent = new TestStudent();
     TestTema testTema = new TestTema();
+
+
+    @Test
+    public void testFailAddGrade() {
+        testGrade.testFailAddGrade();
+    }
+
+    @Test
+    public void testSaveTemaFailure() {
+        testTema.testSaveTemaFailure();
+    }
+
+    @Test
+    public void testSaveStudentFailure() {
+        testStudent.testSaveStudentFailure();
+    }
+
     @Test
     public void testAll() {
-        testStudent.testSaveStudentFailure();
-        testTema.testSaveTemaFailure();
-        testGrade.testFailAddGrade();
+        testSaveStudentFailure();
+        testSaveTemaFailure();
+        testFailAddGrade();
     }
 }
