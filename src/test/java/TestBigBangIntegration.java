@@ -3,7 +3,7 @@ import tests_grade.TestGrade;
 import tests_student.TestStudent;
 import tests_tema.TestTema;
 
-public class BigBangIntegration {
+public class TestBigBangIntegration {
     TestGrade testGrade = new TestGrade();
     TestStudent testStudent = new TestStudent();
     TestTema testTema = new TestTema();
