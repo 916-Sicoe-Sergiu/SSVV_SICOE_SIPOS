@@ -23,7 +23,7 @@ public class TestGrade {
     TemaXMLRepository temaXmlRepo = new TemaXMLRepository(temaValidator, "src/main/java/org/example/teme.xml");
     StudentXMLRepo studentXmlRepo = new StudentXMLRepo(studentValidator, "src/main/java/org/example/studenti.xml");
 
-    Service service = new Service(studentXmlRepo, temaXmlRepo, notaXMLRepo);
+    public Service service = new Service(studentXmlRepo, temaXmlRepo, notaXMLRepo);
     @Test
     public void testFailAddGrade() {
         int result = service.saveNota("2", "3", 9.0, 2, "Very good");

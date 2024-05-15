@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entitati>
+    <tema ID="a1">
+        <Descriere>Assignment One</Descriere>
+        <Deadline>9</Deadline>
+        <Startline>7</Startline>
+    </tema>
+    <tema ID="a2">
+        <Descriere>Assignment Two</Descriere>
+        <Deadline>10</Deadline>
+        <Startline>8</Startline>
+    </tema>
     <tema ID="3">
         <Descriere>gui</Descriere>
         <Deadline>9</Deadline>
